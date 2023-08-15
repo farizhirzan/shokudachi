@@ -61,6 +61,7 @@ void loop1()
   sensor = analogRead(A0); //read sensor
   hum = map(sensor, 0, 550, 1, 4); //mapping soil moisture sensor
   digitalWrite(powerpin,LOW); //turn sensor OFF
+  Serial.print("humidity = ");
   Serial.println(hum); //print reading
   delay(delayTime); //wait until next reading
 }
@@ -78,6 +79,7 @@ void loop2()
 {
   luminosity = analogRead(PHOTORESISTOR_PIN);
   lum = map(luminosity, 0, 800, 1, 4);
+  Serial.print("luminosity = ");
   Serial.println(lum);
   delay(delayTime);
 }
